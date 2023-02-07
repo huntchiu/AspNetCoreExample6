@@ -2,8 +2,13 @@
 
 ## 技術
 
+- PostgreSQL
+- Entity Framework Core
 - Card Responsive
+- JQuery Form Submit
 
 ## 功能
 
-- 檔案上傳，更新與刪除
+- 圖片上傳
+- 圖片更新
+- 圖片刪除
