@@ -2,10 +2,7 @@
 
 ## 技術
 
-- DropDownList
-- SelectListItem
-- ViewModel
-- ViewBag
+- Card Responsive
 
 ## 功能
 

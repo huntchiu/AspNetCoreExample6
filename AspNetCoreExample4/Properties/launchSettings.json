@@ -10,7 +10,6 @@
   "profiles": {
     "AspNetCoreExample4": {
       "commandName": "Project",
-      "launchBrowser": true,
       "applicationUrl": "http://localhost:5074",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
