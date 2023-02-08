@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AspNetCoreExample4.Models;
+using AspNetCoreExample5.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace AspNetCoreExample4.Data
+namespace AspNetCoreExample5.Data
 {
     public class ApplicationDbContext : DbContext
     {

@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using AspNetCoreExample4.Models;
-using AspNetCoreExample4.Data;
+using AspNetCoreExample5.Models;
+using AspNetCoreExample5.Data;
 
 namespace AspNetCoreExample4.Controllers;
 
