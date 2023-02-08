@@ -19,5 +19,8 @@ namespace AspNetCoreExample5.Models
         [DisplayName("圖片")]
         [ValidateNever]
         public String? ImageUrl { get; set; }
+
+        [DisplayName("描述")]
+        public String? Description { get; set; }
     }
 }

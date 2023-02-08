@@ -5,60 +5,69 @@
 
 <div class="card border">
     <div class="card-body">
-        @if (@Model?.Id == null)
-        {
-            <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Upsert">
-                <div class="mb-3">
-                    <label asp-for="Name" class="form-label"></label>
-                    <input asp-for="Name" class="form-control" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <div class="mb-3">
-                    <label asp-for="ImageUrl" class="form-label"></label>
-                    <input type="file" name="file" accept="image/*" class="form-control" />
-                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
-                </div>
-
-                <button type="submit" class="btn btn-primary">創建</button>
-            </form>
-        }
-        else
-        {
-            <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Upsert">
+        <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Upsert">
+            @if (@Model?.Id != null)
+            {
                 <input asp-for="Id" hidden />
                 <input asp-for="ImageUrl" hidden />
-                <div class="mb-3">
-                    <label asp-for="Name" class="form-label"></label>
-                    <input asp-for="Name" class="form-control" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <div class="mb-3">
-                    <label asp-for="ImageUrl" class="form-label"></label>
-                    <input type="file" name="file" accept="image/*" class="form-control" />
-                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
-                </div>
-                <div class="mb-3">
-                    <img class="img-thumbnail" src="@Model.ImageUrl">
-                </div>
-                <button type="submit" class="btn btn-primary">更新</button>
+            }
 
-                <button class="btn btn-danger" id="delete">刪除</button>
-            </form>
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="ImageUrl" class="form-label"></label>
+                <input type="file" name="file" accept="image/*" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            @if (@Model?.Id != null)
+            {
+                <div class="mb-3">
+                    <img class="img-thumbnail" src="@Model.ImageUrl" />
+                </div>
+            }
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea asp-for="Description" rows="3" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            @if (@Model?.Id != null)
+            {
+                <input asp-for="Id" hidden />
+                <input asp-for="ImageUrl" hidden />
 
-        }
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">更新</button>
+                    <button class="btn btn-danger" id="delete">刪除</button>
+                </div>
 
+            }
+            else
+            {
+                <button type="submit" class="btn btn-primary">創建</button>
+            }
+
+        </form>
     </div>
 </div>
 
 
 
 @section scripts {
+<script src="~/lib/tinymce/tinymce.min.js"></script>
 <script>
     $(document).ready(function () {
+
+        tinymce.init({
+            selector: "textarea",
+            language: 'zh-Hans', // 設定本地語言
+        });
+
         $('#delete').click(function (e) {
             e.preventDefault();
             var id = $("input[name='Id']").val();
-
             $('<form>', {
                 method: "post",
                 "html": '<input type="number" name="Id" value="' + id + '" hidden />',

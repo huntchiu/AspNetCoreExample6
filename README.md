@@ -1,14 +1,12 @@
-# AspNetCoreExample4
+# AspNetCoreExample5
 
 ## 技術
 
 - PostgreSQL
 - Entity Framework Core
-- Card Responsive
-- JQuery Form Submit
+- TinyMCE
 
 ## 功能
 
-- 圖片上傳
-- 圖片更新
-- 圖片刪除
+- TinyMCE 富文本編輯
+- TinyMCE 富文本編輯 + 圖片上傳
