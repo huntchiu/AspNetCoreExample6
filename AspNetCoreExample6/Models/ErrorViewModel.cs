@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreExample5.Models;
+﻿namespace AspNetCoreExample6.Models;
 
 public class ErrorViewModel
 {

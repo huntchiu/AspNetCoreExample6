@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace AspNetCoreExample5.Models
+namespace AspNetCoreExample6.Models
 {
     public class Product
     {

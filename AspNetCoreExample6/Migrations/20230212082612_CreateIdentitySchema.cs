@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace AspNetCoreExample5.Migrations
+namespace AspNetCoreExample6.Migrations
 {
     /// <inheritdoc />
-    public partial class AddDescription : Migration
+    public partial class CreateIdentitySchema : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

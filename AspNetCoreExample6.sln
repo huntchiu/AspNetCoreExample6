@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1704.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreExample5", "AspNetCoreExample5\AspNetCoreExample5.csproj", "{09A9A4D4-3D4D-471C-8A5A-7406B6A3D5D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreExample6", "AspNetCoreExample6\AspNetCoreExample6.csproj", "{09A9A4D4-3D4D-471C-8A5A-7406B6A3D5D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

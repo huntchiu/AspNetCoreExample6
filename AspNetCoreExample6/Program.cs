@@ -1,4 +1,4 @@
-﻿using AspNetCoreExample5.Data;
+﻿using AspNetCoreExample6.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
